@@ -1,0 +1,11 @@
+{
+  "name": "officetrans",
+  "version": "1.0.0",
+  "description": "Office transport platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lahiru Samaraweera",
+  "license": "ISC"
+}
