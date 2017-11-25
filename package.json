@@ -6,6 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lahirusamaraweera/officetrans.git"
+  },
   "author": "Lahiru Samaraweera",
   "license": "ISC"
 }
