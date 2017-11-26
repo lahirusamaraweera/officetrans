@@ -10,7 +10,10 @@
         vm.msg = 'hellow';
         vm.display = function(){
             console.log(vm.msg);
-            ngToast.create('a toast message...');
+            ngToast.create({
+                className: 'danger',
+                content: 'test'
+              });
         }
         
         

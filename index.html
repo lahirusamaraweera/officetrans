@@ -1,11 +1,17 @@
 <html ng-app="officetrans">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>officetrans</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <!-- STYLES -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel"stylesheet" href="node_modules/tether/dist/css/tether.min.css">
         
         <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast-animations.css">
         <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast.min.css">
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
         
         <!-- SCRIPTS -->
         <script src="node_modules/angular/angular.min.js"></script>
@@ -36,8 +42,10 @@
         
     </head>
     <body ng-controller="mainctrl as vm">
-            <toast class="animated zoomInRight"></toast>
+        <toast class="animated zoomInRight"></toast>
         <h1 >{{vm.msg}}</h1>
+        <i class="fa fa-camera-retro"></i> fa-camera-retro
+        
         <input class="form-control" type="text" ng-model="vm.msg" ng-change="vm.display()">
         <button class="btn btn-success btn-sm" ng-click="vm.display()">tst</button>
     </body>
