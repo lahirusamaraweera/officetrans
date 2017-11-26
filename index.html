@@ -1,0 +1,44 @@
+<html ng-app="officetrans">
+    <head>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel"stylesheet" href="node_modules/tether/dist/css/tether.min.css">
+        
+        <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast-animations.css">
+        <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast.min.css">
+        
+        <!-- SCRIPTS -->
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+
+        <script src="node_modules/tether/dist/js/tether.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+        <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="node_modules/ng-toast/dist/ngToast.min.js"></script>
+        
+
+        <!-- APP -->
+        <script src="app.js"></script>
+        <script src="config.js"></script>
+
+        <!-- CONTROLLERS -->
+        <script src='controller.js'></script>
+
+
+        <!-- SERVICES AND FACTORIES -->
+
+
+
+        
+        
+    </head>
+    <body ng-controller="mainctrl as vm">
+            <toast class="animated zoomInRight"></toast>
+        <h1 >{{vm.msg}}</h1>
+        <input class="form-control" type="text" ng-model="vm.msg" ng-change="vm.display()">
+        <button class="btn btn-success btn-sm" ng-click="vm.display()">tst</button>
+    </body>
+</html>
