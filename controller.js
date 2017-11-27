@@ -7,12 +7,12 @@
 
     function mainctrl($scope,ngToast){
         var vm = this;
-        vm.msg = 'hellow';
-        vm.display = function(){
+        vm.msg = 'Testuser';
+        vm.test = function(){
             console.log(vm.msg);
             ngToast.create({
-                className: 'danger',
-                content: 'test'
+                className: 'success',
+                content: '<strong>Successfully loggedout</strong> '
               });
         }
         

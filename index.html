@@ -1,10 +1,12 @@
-<html ng-app="officetrans">
+<!DOCTYPE html>
+<html lang="en" ng-app="officetrans">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>officetrans</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
         <!-- STYLES -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel"stylesheet" href="node_modules/tether/dist/css/tether.min.css">
@@ -12,11 +14,12 @@
         <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast-animations.css">
         <link rel="stylesheet" href="node_modules/ng-toast/dist/ngToast.min.css">
         <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/custom.css">
         
         <!-- SCRIPTS -->
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+        <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
         <script src="node_modules/tether/dist/js/tether.min.js"></script>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -32,21 +35,36 @@
 
         <!-- CONTROLLERS -->
         <script src='controller.js'></script>
+        <script src="app/navbar/nav.ctrl.js"></script>
+        <script src="app/home/home.ctrl.js"></script>
+        <script src="app/login/login.ctrl.js"></script>
 
 
         <!-- SERVICES AND FACTORIES -->
+        <script src="services/login.service.js"></script>
 
 
 
         
         
     </head>
-    <body ng-controller="mainctrl as vm">
+    <body>
         <toast class="animated zoomInRight"></toast>
-        <h1 >{{vm.msg}}</h1>
-        <i class="fa fa-camera-retro"></i> fa-camera-retro
-        
-        <input class="form-control" type="text" ng-model="vm.msg" ng-change="vm.display()">
-        <button class="btn btn-success btn-sm" ng-click="vm.display()">tst</button>
+
+        <section>
+			<header id="header" ng-if="login == 1" ng-include="'app/navbar/nav.html'">
+
+			</header>
+			<section class="main-content-wrapper" style="padding-top : 70px;">
+
+
+				<section id="main-content" >
+				    <section ui-view></section>
+				</section>
+
+
+			</section>
+        </section>
+    
     </body>
 </html>
